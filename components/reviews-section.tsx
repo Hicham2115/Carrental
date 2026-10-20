@@ -75,17 +75,17 @@ export function ReviewsSection() {
           {visibleReviews.map((review) => (
             <article
               key={review.name}
-              className="flex flex-col border-b border-border py-6 sm:border-b-0 sm:border-r sm:px-6 sm:py-0 sm:first:pl-0 sm:last:border-r-0 sm:last:pr-0"
+              className="group/review flex flex-col border-b border-border py-6 transition-colors duration-200 sm:border-b-0 sm:border-r sm:px-6 sm:py-0 sm:first:pl-0 sm:last:border-r-0 sm:last:pr-0 motion-reduce:transition-none"
             >
               <div className="flex items-start justify-between gap-3">
-                <span aria-hidden="true" className="h-10 text-6xl font-semibold leading-none text-brand">“</span>
-                <div className="flex gap-0.5 text-brand" aria-label="Notation illustrative, cinq étoiles">
+                <span aria-hidden="true" className="h-10 text-6xl font-semibold leading-none text-brand transition-colors duration-200 group-hover/review:text-brand-strong">“</span>
+                <div className="flex gap-0.5 text-brand transition-colors duration-200 group-hover/review:text-brand-strong" aria-label="Notation illustrative, cinq étoiles">
                   {Array.from({ length: 5 }, (_, star) => (
                     <Star key={star} aria-hidden="true" className="size-3.5 fill-current" />
                   ))}
                 </div>
               </div>
-              <blockquote className="mt-3 flex-1 text-[15px] leading-7 text-slate-700 sm:text-base">
+              <blockquote className="mt-3 flex-1 text-base font-medium leading-7 text-black sm:text-lg">
                 {review.text}
               </blockquote>
               <div className="mt-7 flex items-center gap-3 border-t border-border pt-5">

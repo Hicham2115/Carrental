@@ -51,7 +51,7 @@ export function ServiceSection() {
                 key={title}
                 className="flex items-start gap-4 py-4 sm:gap-5 sm:py-5"
               >
-                <span className="relative z-10 flex size-11 shrink-0 items-center justify-center rounded-xl bg-[#084ea3] text-white sm:size-12">
+                <span className="relative z-10 flex size-11 shrink-0 items-center justify-center rounded-xl bg-[#084ea3] text-white shadow-sm sm:size-12">
                   <Icon
                     aria-hidden="true"
                     className="size-5"
@@ -75,7 +75,7 @@ export function ServiceSection() {
 
           <a
             href="#contact"
-            className="mt-6 inline-flex min-h-12 w-fit cursor-pointer items-center gap-3 rounded-sm bg-[#084ea3] px-5 text-sm font-semibold text-white shadow-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#084ea3]"
+            className="mt-6 inline-flex min-h-12 w-fit cursor-pointer items-center gap-3 rounded-sm bg-[#084ea3] px-5 text-sm font-semibold text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#084ea3]"
           >
             Parlons de votre trajet
             <ArrowUpRight
@@ -86,7 +86,7 @@ export function ServiceSection() {
           </a>
         </div>
 
-        <figure className="relative min-h-[340px] rounded-[2rem] border border-[#d8e5f4] bg-surface-blue p-3 shadow-[0_24px_55px_-30px_rgba(8,78,163,0.18)] sm:min-h-[420px] lg:min-h-[560px]">
+        <figure className="relative min-h-[340px] rounded-[2rem] border border-border bg-surface-blue p-3 shadow-[0_16px_36px_rgba(22,48,101,0.08)] sm:min-h-[420px] lg:min-h-[560px]">
           <div className="absolute inset-3 overflow-hidden rounded-[1.35rem] ring-1 ring-white/80">
             <Image
               src="/images/services-interior.webp"
@@ -97,7 +97,7 @@ export function ServiceSection() {
             />
             <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-slate-950/35 to-transparent" />
           </div>
-          <figcaption className="absolute bottom-7 left-7 rounded-lg border border-white/30 bg-[#084ea3] px-4 py-3 text-xs font-semibold uppercase tracking-[0.15em] text-white shadow-[0_8px_24px_rgba(8,78,163,0.28)] sm:bottom-9 sm:left-9">
+          <figcaption className="absolute bottom-7 left-7 rounded-lg bg-[#084ea3] px-4 py-3 text-xs font-semibold uppercase tracking-[0.15em] text-white sm:bottom-9 sm:left-9">
             Casablanca · Maroc
           </figcaption>
         </figure>

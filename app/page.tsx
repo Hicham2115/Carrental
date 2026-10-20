@@ -10,6 +10,7 @@ import { VehicleCategoriesSection } from "@/components/vehicle-categories-sectio
 import { SiteFooter } from "@/components/site-footer";
 import { Header } from "@/components/layout/header";
 import { SectionReveal } from "@/components/section-reveal";
+import { ScrollToTop } from "@/components/scroll-to-top";
 
 export default function HomePage() {
   return (
@@ -26,6 +27,7 @@ export default function HomePage() {
         <SectionReveal><CTASection /></SectionReveal>
       </main>
       <SiteFooter />
+      <ScrollToTop />
       <Toaster position="top-right" richColors />
     </>
   );

@@ -62,10 +62,10 @@ export function Hero() {
       {/* <div className="relative z-10 mx-auto -mt-14 max-w-[100rem] px-4 sm:-mt-16 sm:px-8 lg:-mt-[68px] lg:px-14">
         <BookingForm />
       </div> */}
-      <div className="border-y border-blue-100 bg-surface-blue/70">
+      <div className="border-y border-[#084ea3]/15 bg-[#f1f6fc]">
         <ul
           aria-label="Les engagements Carrental.ma"
-          className="mx-auto grid max-w-[76rem] grid-cols-1 divide-y divide-blue-100 px-5 sm:grid-cols-3 sm:divide-y-0 sm:divide-x sm:px-8 lg:px-10"
+          className="mx-auto grid max-w-[76rem] grid-cols-1 divide-y divide-[#084ea3]/15 px-5 sm:grid-cols-3 sm:divide-y-0 sm:divide-x sm:px-8 lg:px-10"
         >
           {commitments.map(({ icon: Icon, title, description }) => (
             <li key={title} className="flex min-h-[88px] items-center gap-4 px-3 py-4 sm:px-5 lg:px-7">

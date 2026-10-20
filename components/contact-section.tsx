@@ -7,7 +7,7 @@ export function ContactSection() {
       id="contact"
       className="scroll-mt-24  px-3 py-10 sm:px-6 sm:py-14 lg:px-10 2xl:px-14"
     >
-      <div className="grid w-full gap-0 overflow-hidden rounded-[2rem] border-2 border-[#1b3169] bg-white shadow-[0_24px_64px_-44px_rgba(27,49,105,0.45)] lg:grid-cols-[0.98fr_1.02fr]">
+      <div className="grid w-full gap-0 overflow-hidden rounded-[2rem] border-2 border-[#1b3169] bg-white shadow-[0_24px_60px_rgba(22,48,101,0.10)] lg:grid-cols-[0.98fr_1.02fr]">
         <div className="relative flex min-h-[560px] flex-col overflow-hidden rounded-[1.4rem] bg-[#1d336b] px-7 py-9 text-white sm:px-11 sm:py-11 lg:min-h-[720px] lg:rounded-r-none lg:px-14 lg:py-14">
           <p className="text-base font-semibold tracking-tight">
             Carrental.ma

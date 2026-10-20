@@ -4,6 +4,7 @@ import { ArrowRight, Fuel, Gauge, Info, Settings2, UsersRound } from "lucide-rea
 const categories = [
   {
     name: "Citadines",
+    model: "Style Picanto",
     description: "Idéales en ville, économiques et faciles à garer.",
     price: 29,
     specs: { mileage: "32 000 km", transmission: "Manuelle", fuel: "Essence", seats: "5 places" },
@@ -12,6 +13,7 @@ const categories = [
   },
   {
     name: "Compactes",
+    model: "Style Corolla",
     description: "Confortables et polyvalentes pour vos trajets du quotidien.",
     price: 39,
     specs: { mileage: "24 500 km", transmission: "Automatique", fuel: "Diesel", seats: "5 places" },
@@ -20,6 +22,7 @@ const categories = [
   },
   {
     name: "SUV & 4x4",
+    model: "Style Duster",
     description: "Plus d’espace et de puissance pour partir à l’aventure.",
     price: 59,
     specs: { mileage: "18 000 km", transmission: "Automatique", fuel: "Diesel", seats: "5 places" },
@@ -28,6 +31,7 @@ const categories = [
   },
   {
     name: "Berlines",
+    model: "Style Peugeot 508",
     description: "Confort et élégance pour vos déplacements professionnels.",
     price: 69,
     specs: { mileage: "29 000 km", transmission: "Automatique", fuel: "Diesel", seats: "5 places" },
@@ -36,6 +40,7 @@ const categories = [
   },
   {
     name: "Utilitaires",
+    model: "Style Renault Trafic",
     description: "Le volume qu’il vous faut pour transporter vos affaires.",
     price: 49,
     specs: { mileage: "41 000 km", transmission: "Manuelle", fuel: "Diesel", seats: "3 places" },
@@ -44,6 +49,7 @@ const categories = [
   },
   {
     name: "Monospaces",
+    model: "Style Dacia Lodgy",
     description: "Plus de place pour voyager ensemble et emporter vos bagages.",
     price: null,
     specs: { mileage: "21 000 km", transmission: "Automatique", fuel: "Diesel", seats: "7 places" },
@@ -83,20 +89,20 @@ export function VehicleCategoriesSection() {
             </p>
             <p className="mt-3 flex items-start gap-2 text-xs leading-5 text-slate-500">
               <Info aria-hidden="true" className="mt-0.5 size-3.5 shrink-0 text-[#084ea3]" />
-              <span>Caractéristiques illustratives, à confirmer lors de la réservation.</span>
+              <span>Modèles et caractéristiques illustratifs, à confirmer lors de la réservation.</span>
             </p>
           </div>
         </div>
 
         <div className="mt-7 grid grid-cols-1 gap-4 sm:mt-9 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
-          {categories.map(({ name, description, price, specs, image, imageAlt }) => (
+          {categories.map(({ name, model, description, price, specs, image, imageAlt }) => (
             <article
               key={name}
-              className="group flex min-w-0 flex-col overflow-hidden rounded-2xl border border-border bg-white shadow-[0_10px_30px_-24px_rgba(8,78,163,0.16)] transition-[border-color,box-shadow,transform] duration-300 hover:-translate-y-1 hover:border-[#084ea3]/40 hover:shadow-[0_22px_46px_-26px_rgba(8,78,163,0.24)] motion-reduce:transform-none motion-reduce:transition-none"
+              className="group flex min-w-0 flex-col overflow-hidden rounded-lg border border-border bg-white shadow-[0_10px_28px_rgba(22,48,101,0.06)] transition-[border-color,box-shadow] duration-300 hover:border-[#084ea3]/40 hover:shadow-[0_18px_38px_rgba(22,48,101,0.12)]"
             >
               <div className="relative aspect-[2/1] overflow-hidden border-b border-border bg-surface-blue">
-                <span className="absolute left-4 top-4 z-10 rounded-md border border-[#084ea3]/15 bg-white/90 px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.13em] text-[#084ea3]">
-                  Catégorie
+                <span className="absolute left-4 top-4 z-10 rounded-md border border-[#084ea3]/20 bg-white px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.13em] text-[#084ea3]">
+                  {model}
                 </span>
                 <Image
                   src={image}
@@ -120,7 +126,7 @@ export function VehicleCategoriesSection() {
                 >
                   {vehicleDetails.map(({ label, key, icon: Icon }) => (
                     <li key={label} className="flex min-w-0 items-start gap-2.5">
-                      <span className="flex size-7 shrink-0 items-center justify-center rounded-md bg-surface-blue text-[#084ea3]">
+                      <span className="flex size-7 shrink-0 items-center justify-center rounded-md bg-[#eaf2fb] text-[#084ea3]">
                         <Icon aria-hidden="true" className="size-4" />
                       </span>
                       <span className="flex min-w-0 flex-col text-xs leading-4">
@@ -141,7 +147,7 @@ export function VehicleCategoriesSection() {
                   )}
                   <a
                     href="#reservation"
-                    className="inline-flex min-h-11 cursor-pointer items-center gap-2 rounded-sm bg-[#084ea3] px-4 text-sm font-semibold text-white shadow-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#084ea3]"
+                    className="inline-flex min-h-11 cursor-pointer items-center gap-2 rounded-sm bg-[#084ea3] px-4 text-sm font-semibold text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#084ea3]"
                   >
                     {price === null ? "Demander un tarif" : "Réserver"}
                     <ArrowRight aria-hidden="true" className="size-4" />

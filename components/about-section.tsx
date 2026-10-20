@@ -27,7 +27,7 @@ export function AboutSection() {
           </p>
           <a
             href="#a-propos"
-            className="mt-5 inline-flex min-h-11 cursor-pointer items-center gap-3 rounded-sm bg-[#084ea3] px-5 text-sm font-semibold text-white shadow-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#084ea3]"
+            className="mt-5 inline-flex min-h-11 cursor-pointer items-center gap-3 rounded-sm bg-[#084ea3] px-5 text-sm font-semibold text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#084ea3]"
           >
             Découvrir notre histoire
             <ArrowRight aria-hidden="true" className="size-4" />

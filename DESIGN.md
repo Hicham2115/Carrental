@@ -3,11 +3,12 @@ version: alpha
 name: Carrental.ma
 description: French-first car rental website for trips across Morocco.
 colors:
-  primary: "#0B4EA2"
-  primary-strong: "#073B7A"
+  primary: "#084EA3"
+  primary-strong: "#1D336B"
   background: "#FFFFFF"
   foreground: "#111111"
   surface-blue: "#F1F6FC"
+  brand-muted: "#EAF2FB"
   border: "#DCE5F0"
   muted: "#657286"
   star: "#F0AA28"
@@ -56,11 +57,11 @@ The page should feel like the first stop before a bright drive along the Casabla
 
 ## Colors
 
-Carrental blue (`#0B4EA2`) is the main action and identity color. The stronger blue (`#073B7A`) is for hover and high-contrast accents. White is the page base; near-black is reserved for copy. Pale blue (`#F1F6FC`) separates a few sections without creating a card-heavy layout. Borders use a soft blue-gray, and muted text remains dark enough to read. Amber is reserved for illustrative review stars.
+Use the user-selected Carrental blues consistently: vivid blue (`#084EA3`) for primary actions and accents, and deep blue (`#1D336B`) for dark feature panels such as FAQ and contact. Use pale blue (`#F1F6FC` and `#EAF2FB`) for supportive surfaces, with white as the main background and near-black for body text. Keep the amber review star (`#F0AA28`) for the familiar rating cue.
 
 ## Typography
 
-Use Montserrat for the page, with Helvetica and Arial as the brand-approved fallbacks. Headings use firm weight and close line-height; body text stays regular and comfortably readable. French text uses sentence case, clear labels, and short direct phrases.
+Use Montserrat for the page, with Helvetica and Arial as the brand-approved fallbacks. Use Bold for titles, prices, and calls to action; SemiBold for subtitles; and Regular for body copy. French text uses sentence case, clear labels, and short direct phrases. Keep the brand book's signature, « Votre mobilité, simplement. », in the site copy.
 
 ## Layout
 
@@ -68,7 +69,7 @@ Use a centered content width of about 80rem with fluid side padding. The desktop
 
 ## Elevation & Depth
 
-Separate content with whitespace, pale-blue section surfaces, and light borders. Use one restrained shadow for the booking strip. Do not add shadows to the logo or use depth effects to decorate static text.
+Separate content with whitespace and light neutral borders. Keep photos bright and use the vivid blue for actions, with matching deep-blue surfaces for FAQ and contact. Follow the brand book's logo clear space and preserve its proportions, colors, and legibility. Do not add effects to the logo.
 
 ## Shapes
 
@@ -82,7 +83,7 @@ Links and controls have visible focus rings, clear hover color, and a disabled s
 
 ### Buttons and actions
 
-Primary actions use solid Carrental blue with white text. Secondary actions use a white surface with a blue border. Keep action labels specific, such as « Réserver » and « Envoyer le message ».
+Primary actions use solid vivid blue (`#084EA3`) with white text. Secondary actions use a white surface with a blue border. Keep action labels specific, such as « Réserver » and « Envoyer le message ».
 
 ### Navigation and data display
 

@@ -34,7 +34,7 @@ export function ContactForm() {
   return (
     <form noValidate onSubmit={(event) => { event.preventDefault(); void form.handleSubmit(); }} className="space-y-5">
       <div className="mb-8 flex items-start gap-4 border-b border-slate-200 pb-7">
-        <span aria-hidden="true" className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-[#eaf1fa] text-brand-strong"><Mail className="size-5" /></span>
+        <span aria-hidden="true" className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-[#eaf2fb] text-brand"><Mail className="size-5" /></span>
         <div>
           <h3 className="text-lg font-semibold tracking-tight text-slate-950">Votre message</h3>
           <p className="mt-1 text-sm leading-6 text-slate-500">Un projet de location ou une question ? Décrivez votre besoin ci-dessous.</p>
@@ -53,7 +53,7 @@ export function ContactForm() {
       <form.Field name="message">
         {(field) => { const error = field.state.meta.errors[0]; return <div><Label htmlFor="contact-message" className="mb-2 block text-sm font-medium">Comment pouvons-nous vous aider ?</Label><Textarea id="contact-message" value={field.state.value} onBlur={field.handleBlur} onChange={(event) => field.handleChange(event.target.value)} aria-invalid={Boolean(error)} aria-describedby={error ? "contact-message-error" : undefined} placeholder="Parlez-nous de votre trajet ou posez votre question…" className="min-h-36 resize-y rounded-lg border-slate-200 px-4 py-3" /><FieldError id="contact-message-error" message={error} /></div>; }}
       </form.Field>
-      <Button type="submit" className="h-12 w-full cursor-pointer rounded-sm bg-[#084ea3] text-sm font-semibold shadow-sm hover:bg-[#084ea3]/90">Envoyer ma demande</Button>
+      <Button type="submit" className="h-12 w-full cursor-pointer rounded-sm bg-[#1d336b] text-sm font-semibold hover:bg-[#172956]">Envoyer ma demande</Button>
       <p className="text-center text-xs leading-5 text-slate-500">La messagerie en ligne est en préparation. Aucune donnée n’est envoyée pour le moment.</p>
     </form>
   );
