@@ -25,16 +25,17 @@ export function Hero() {
     <section id="accueil" aria-label="Location de voiture au Maroc" className="pb-6 sm:pb-0">
       <div className="relative isolate h-[68svh] min-h-[360px] w-full overflow-hidden bg-slate-100 md:hidden">
         <Image
-          src="/images/hero-casablanca-blue.png"
+          src="/images/hero-casablanca-mobile.png"
           alt="Une voiture bleue sur le front de mer de Casablanca, avec la mosquée Hassan II en arrière-plan"
           fill
           priority
           sizes="100vw"
           className="object-cover object-[68%_center]"
         />
+        <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-b from-transparent via-white/45 to-white md:hidden" />
       </div>
 
-      <div className="bg-white px-5 pb-10 pt-7 text-brand-strong md:hidden">
+      <div className="bg-white px-5 pb-10 pt-10 text-brand-strong md:hidden">
         <div className="hero-copy-enter mx-auto max-w-[42rem]">
           <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-brand">
             Location de voiture au Maroc
