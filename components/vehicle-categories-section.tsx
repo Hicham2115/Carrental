@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowRight, Fuel, Gauge, Settings2, UsersRound } from "lucide-react";
+import { ArrowRight, Fuel, Gauge, Info, Settings2, UsersRound } from "lucide-react";
 
 const categories = [
   {
@@ -76,11 +76,16 @@ export function VehicleCategoriesSection() {
               Trouvez la voiture faite pour votre trajet.
             </h2>
           </div>
-          <p className="max-w-md text-sm leading-6 text-slate-600 lg:justify-self-end lg:text-base lg:leading-7">
-            De la citadine agile au grand utilitaire, choisissez le format qui
-            vous accompagne au Maroc.
-            <span className="mt-2 block text-xs text-slate-500">Caractéristiques illustratives, à confirmer lors de la réservation.</span>
-          </p>
+          <div className="max-w-md lg:justify-self-end lg:border-l-2 lg:border-brand/30 lg:pl-6">
+            <p className="text-sm font-medium leading-7 text-slate-700 lg:text-base lg:leading-8">
+              De la citadine agile au grand utilitaire, choisissez le format qui
+              vous accompagne au Maroc.
+            </p>
+            <p className="mt-3 flex items-start gap-2 text-xs leading-5 text-slate-500">
+              <Info aria-hidden="true" className="mt-0.5 size-3.5 shrink-0 text-brand" />
+              <span>Caractéristiques illustratives, à confirmer lors de la réservation.</span>
+            </p>
+          </div>
         </div>
 
         <div className="mt-7 grid grid-cols-1 gap-4 sm:mt-9 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">

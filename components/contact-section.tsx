@@ -1,13 +1,33 @@
-import { Mail, MapPin } from "lucide-react";
-import { SectionHeading } from "@/components/section-heading";
 import { ContactForm } from "@/components/contact-form";
 
 export function ContactSection() {
   return (
-    <section id="contact" className="scroll-mt-24 py-20 sm:py-28">
-      <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20 lg:px-10">
-        <div><SectionHeading eyebrow="Contact" title="Parlons de votre prochain trajet." description="Une question ou un besoin particulier ? Présentez-nous votre projet de location." /><div className="mt-8 space-y-5"><div className="flex items-start gap-4"><span className="flex size-11 items-center justify-center rounded-xl bg-surface-blue text-brand"><Mail aria-hidden="true" className="size-5" /></span><div><p className="text-sm font-semibold text-slate-900">Écrivez-nous</p><p className="mt-1 text-sm text-slate-600">Utilisez le formulaire pour nous décrire votre demande.</p></div></div><div className="flex items-start gap-4"><span className="flex size-11 items-center justify-center rounded-xl bg-surface-blue text-brand"><MapPin aria-hidden="true" className="size-5" /></span><div><p className="text-sm font-semibold text-slate-900">Au Maroc</p><p className="mt-1 text-sm text-slate-600">Une présence pensée pour vos trajets à travers le royaume.</p></div></div></div></div>
-        <div className="rounded-3xl border border-slate-200 bg-white p-5 shadow-[0_25px_70px_-50px_rgba(15,43,78,0.45)] sm:p-8"><ContactForm /></div>
+    <section id="contact" className="scroll-mt-24 bg-brand-strong px-3 py-10 sm:px-6 sm:py-14 lg:px-10 2xl:px-14">
+      <div className="grid w-full gap-4 rounded-[2rem] bg-white p-3 sm:p-4 lg:grid-cols-[0.98fr_1.02fr]">
+        <div className="flex min-h-[560px] flex-col rounded-[1.4rem] bg-[linear-gradient(145deg,#263e83_0%,#182c60_55%,#101e43_100%)] px-7 py-9 text-white sm:px-11 sm:py-11 lg:min-h-[720px] lg:px-14 lg:py-14">
+          <p className="text-base font-semibold tracking-tight">Carrental.ma<span className="text-white/55"> · Location de voiture</span></p>
+
+          <div className="my-auto py-14">
+            <h2 className="max-w-xl text-4xl font-light leading-[1.13] tracking-[-0.045em] sm:text-5xl lg:text-[3.7rem]">
+              Parlons de votre prochain trajet.
+            </h2>
+            <p className="mt-10 max-w-lg text-base leading-8 text-white/75">
+              Dites-nous où vous souhaitez aller et ce dont vous avez besoin. Nous vous aiderons à préparer la suite.
+            </p>
+          </div>
+
+          <figure className="rounded-[2.5rem] bg-white px-6 py-6 text-center text-slate-950 sm:px-9">
+            <blockquote className="text-sm font-medium leading-6">
+              « Une prise en charge claire et une voiture agréable pour notre séjour. »
+            </blockquote>
+            <figcaption className="mt-3 text-xs font-semibold text-brand">Samira B. · Casablanca</figcaption>
+            <p className="mt-1 text-[10px] uppercase tracking-[0.12em] text-slate-500">Exemple non vérifié</p>
+          </figure>
+        </div>
+
+        <div className="flex flex-col justify-center px-4 py-9 text-slate-950 sm:px-8 sm:py-12 lg:px-12 lg:py-14">
+          <ContactForm />
+        </div>
       </div>
     </section>
   );

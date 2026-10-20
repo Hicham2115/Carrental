@@ -26,7 +26,7 @@ export function ServiceSection() {
   return (
     <section
       id="services"
-      className="scroll-mt-24 bg-surface-blue py-12 sm:py-16 lg:py-20"
+      className="scroll-mt-24 bg-white py-12 sm:py-16 lg:py-20"
     >
       <div className="mx-auto grid max-w-7xl gap-8 px-5 sm:px-8 lg:grid-cols-[1fr_0.9fr] lg:items-stretch lg:gap-12 lg:px-10">
         <div className="flex flex-col justify-center">
@@ -86,8 +86,8 @@ export function ServiceSection() {
           </a>
         </div>
 
-        <figure className="relative min-h-[340px] rounded-[1.75rem] border border-border bg-white p-2 shadow-[0_28px_55px_-42px_rgba(7,59,122,0.45)] sm:min-h-[420px] lg:min-h-[560px]">
-          <div className="absolute inset-2 overflow-hidden rounded-[1.25rem]">
+        <figure className="relative min-h-[340px] rounded-[2rem] border border-[#d8e5f4] bg-surface-blue p-3 shadow-[0_24px_55px_-30px_rgba(7,59,122,0.28)] sm:min-h-[420px] lg:min-h-[560px]">
+          <div className="absolute inset-3 overflow-hidden rounded-[1.35rem] ring-1 ring-white/80">
             <Image
               src="/images/services-interior.webp"
               alt="Intérieur d’une voiture avec vue sur le front de mer de Casablanca"
@@ -95,8 +95,9 @@ export function ServiceSection() {
               sizes="(min-width: 1024px) 42vw, 100vw"
               className="object-cover object-center"
             />
+            <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-slate-950/35 to-transparent" />
           </div>
-          <figcaption className="absolute bottom-6 left-6 rounded-lg border border-white/30 bg-brand/95 px-4 py-3 text-xs font-semibold uppercase tracking-[0.15em] text-white shadow-sm sm:bottom-8 sm:left-8">
+          <figcaption className="absolute bottom-7 left-7 rounded-lg border border-white/30 bg-brand px-4 py-3 text-xs font-semibold uppercase tracking-[0.15em] text-white shadow-[0_8px_24px_rgba(7,59,122,0.28)] sm:bottom-9 sm:left-9">
             Casablanca · Maroc
           </figcaption>
         </figure>
