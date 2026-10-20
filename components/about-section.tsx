@@ -1,85 +1,46 @@
 import Image from "next/image";
-import { ArrowRight, BadgeCheck, MapPinned, ShieldCheck } from "lucide-react";
-import { SectionHeading } from "@/components/section-heading";
-
-const highlights = [
-  {
-    icon: ShieldCheck,
-    title: "Des véhicules entretenus",
-    text: "Une flotte suivie pour prendre la route avec sérénité.",
-  },
-  {
-    icon: MapPinned,
-    title: "Présents au Maroc",
-    text: "Des départs simples depuis les principales villes du royaume.",
-  },
-  {
-    icon: BadgeCheck,
-    title: "Un service humain",
-    text: "Une équipe disponible pour vous accompagner à chaque étape.",
-  },
-];
+import { ArrowRight } from "lucide-react";
 
 export function AboutSection() {
   return (
-    <section
-      id="a-propos"
-      className="scroll-mt-24 pb-12 pt-8 sm:pb-16 sm:pt-10"
-    >
-      <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-20 lg:px-10">
-        <div>
-          <SectionHeading
-            align="left"
-            eyebrow="À propos de nous"
-            title="Carrental.ma, votre partenaire de route"
-            description="Chez Carrental.ma, nous simplifions la location de voiture au Maroc pour que vous puissiez profiter pleinement de chaque trajet, avec des véhicules adaptés et un service à votre écoute."
-          />
-          <p className="mt-5 max-w-xl text-sm leading-7 text-slate-600 sm:text-base">
-            Pour un voyage, un déplacement professionnel ou une escapade le
-            temps d’un week-end, nous vous aidons à trouver la voiture qui
-            correspond à votre trajet.
+    <section id="a-propos" className="scroll-mt-24 py-8 sm:py-10 lg:py-12">
+      <div className="mx-auto grid max-w-7xl items-center gap-8 bg-white px-5 sm:px-8 lg:grid-cols-[1fr_0.95fr] lg:gap-12 lg:px-10">
+        <div className="max-w-xl py-2 lg:py-0">
+          <p className="text-xs font-bold uppercase tracking-[0.12em] text-brand">
+            À propos de nous
           </p>
-          <div className="mt-8 space-y-5">
-            {highlights.map(({ icon: Icon, title, text }) => (
-              <div key={title} className="flex gap-4">
-                <span className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-surface-blue text-brand">
-                  <Icon aria-hidden="true" className="size-5" />
-                </span>
-                <div>
-                  <h3 className="text-sm font-semibold text-slate-900">
-                    {title}
-                  </h3>
-                  <p className="mt-1 text-sm leading-6 text-slate-600">
-                    {text}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <h2 className="mt-3 text-3xl font-bold leading-[1.08] tracking-[-0.04em] text-slate-950 sm:text-4xl">
+            <span className="text-brand">Carrental.ma,</span> <br /> votre
+            partenaire de route
+          </h2>
+          <p className="mt-4 text-sm leading-5 text-slate-600 sm:text-base sm:leading-6">
+            Chez Carrental.ma, nous simplifions la location de voiture au Maroc
+            pour que vous puissiez profiter pleinement de chaque trajet. Des
+            véhicules fiables, un service transparent et une équipe locale à
+            votre écoute, où que vous soyez.
+          </p>
+          <p className="mt-3 text-sm leading-5 text-slate-600 sm:text-base sm:leading-6">
+            Que vous voyagiez pour le travail, les vacances ou une escapade le
+            temps d’un week-end, nous vous aidons à choisir un véhicule adapté à
+            votre itinéraire. De la réservation jusqu’au retour, notre équipe
+            reste disponible pour rendre chaque étape simple et agréable.
+          </p>
           <a
-            href="#services"
-            className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-brand hover:text-brand-strong"
+            href="#a-propos"
+            className="mt-5 inline-flex min-h-11 items-center gap-3 rounded-md bg-brand px-5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-brand-strong focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand"
           >
-            Découvrir nos services{" "}
+            Découvrir notre histoire
             <ArrowRight aria-hidden="true" className="size-4" />
           </a>
         </div>
-        <div className="relative min-h-[390px] overflow-hidden rounded-[2rem] bg-surface-blue sm:min-h-[510px]">
+        <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-surface-blue sm:aspect-[1.45/1] lg:aspect-[1.28/1]">
           <Image
             src="/images/about-traveler.jpg"
             alt="Un voyageur prêt à prendre la route au Maroc"
             fill
-            sizes="(max-width: 1024px) 100vw, 45vw"
+            sizes="(max-width: 1024px) 100vw, 48vw"
             className="object-cover"
           />
-          <div className="absolute bottom-5 left-5 rounded-2xl bg-white/95 px-5 py-4 shadow-lg backdrop-blur sm:bottom-7 sm:left-7">
-            <p className="text-2xl font-bold tracking-tight text-brand">
-              Carrental.ma
-            </p>
-            <p className="mt-1 text-xs font-medium text-slate-600">
-              Votre mobilité, simplement.
-            </p>
-          </div>
         </div>
       </div>
     </section>

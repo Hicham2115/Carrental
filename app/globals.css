@@ -63,7 +63,7 @@
   --brand-muted: #eaf2fb;
   --star: #f0aa28;
   --radius: 0.75rem;
-  scrollbar-color: #91a5be #f1f6fc;
+  scrollbar-color: #0b4ea2 #eaf2fb;
   scrollbar-width: thin;
 }
 
@@ -74,8 +74,19 @@
 
   html {
     @apply font-sans;
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
     scroll-padding-top: 5rem;
+    scrollbar-color: #0b4ea2 #eaf2fb;
+    scrollbar-width: thin;
+  }
+
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
   }
 
   body {
@@ -95,17 +106,25 @@
 }
 
 *::-webkit-scrollbar-track {
-  background: #f1f6fc;
+  background: #eaf2fb;
 }
 
 *::-webkit-scrollbar-thumb {
-  border: 2px solid #f1f6fc;
+  border: 2px solid #eaf2fb;
   border-radius: 999px;
-  background: #91a5be;
+  background: #0b4ea2;
 }
 
 *::-webkit-scrollbar-thumb:hover {
-  background: #657c99;
+  background: #073b7a;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #0b4ea2;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background: #073b7a;
 }
 
 .announcement-track {

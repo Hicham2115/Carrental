@@ -6,6 +6,7 @@ import { FAQSection } from "@/components/faq-section";
 import { Hero } from "@/components/hero";
 import { ReviewsSection } from "@/components/reviews-section";
 import { ServiceSection } from "@/components/service-section";
+import { VehicleCategoriesSection } from "@/components/vehicle-categories-section";
 import { SiteFooter } from "@/components/site-footer";
 import { Header } from "@/components/layout/header";
 
@@ -16,6 +17,7 @@ export default function HomePage() {
       <main>
         <Hero />
         <AboutSection />
+        <VehicleCategoriesSection />
         <ServiceSection />
         <ReviewsSection />
         <FAQSection />

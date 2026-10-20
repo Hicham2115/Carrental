@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/navbar-components/logo";
 
 const links = [
-  { href: "#services", label: "Nos voitures" },
+  { href: "#vehicules", label: "Nos voitures" },
   { href: "#a-propos", label: "À propos" },
   { href: "#faq", label: "FAQ" },
   { href: "#contact", label: "Contact" },
