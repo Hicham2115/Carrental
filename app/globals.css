@@ -1,26 +1,189 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: "Montserrat", "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-heading: "Montserrat", "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --color-destructive: var(--destructive);
+  --color-brand: var(--brand);
+  --color-brand-strong: var(--brand-strong);
+  --color-surface-blue: var(--surface-blue);
+  --color-brand-muted: var(--brand-muted);
+  --color-star: var(--star);
+  --radius-sm: calc(var(--radius) * 0.67);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) * 1.33);
+  --radius-xl: calc(var(--radius) * 1.67);
+  --radius-2xl: calc(var(--radius) * 2);
+}
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #111111;
+  --card: #ffffff;
+  --card-foreground: #111111;
+  --popover: #ffffff;
+  --popover-foreground: #111111;
+  --primary: #0b4ea2;
+  --primary-foreground: #ffffff;
+  --secondary: #f1f6fc;
+  --secondary-foreground: #111111;
+  --muted: #f1f6fc;
+  --muted-foreground: #657286;
+  --accent: #eaf2fb;
+  --accent-foreground: #073b7a;
+  --destructive: #b42318;
+  --border: #dce5f0;
+  --input: #cbd7e5;
+  --ring: #0b4ea2;
+  --brand: #0b4ea2;
+  --brand-strong: #073b7a;
+  --surface-blue: #f1f6fc;
+  --brand-muted: #eaf2fb;
+  --star: #f0aa28;
+  --radius: 0.75rem;
+  scrollbar-color: #91a5be #f1f6fc;
+  scrollbar-width: thin;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  html {
+    @apply font-sans;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Montserrat", "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+
+  ::selection {
+    background: #d9e8fb;
+    color: #073b7a;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #f1f6fc;
+}
+
+*::-webkit-scrollbar-thumb {
+  border: 2px solid #f1f6fc;
+  border-radius: 999px;
+  background: #91a5be;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #657c99;
+}
+
+.announcement-track {
+  display: flex;
+  width: max-content;
+  height: 100%;
+  animation: announcement-scroll 38s linear infinite;
+}
+
+.announcement-group,
+.announcement-cycle {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+}
+
+.announcement-cycle {
+  gap: 2rem;
+  padding-inline: 1rem;
+  white-space: nowrap;
+}
+
+.announcement-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes announcement-scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .announcement-track {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+  }
+
+  .announcement-bar {
+    height: auto;
+    min-height: 2rem;
+  }
+
+  .announcement-group[aria-hidden="true"] {
+    display: none;
+  }
+
+  .announcement-cycle:not(:first-child) {
+    display: none;
+  }
+
+  .announcement-cycle:first-child {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.25rem 0.75rem;
+    padding-inline: 1rem;
+    text-align: center;
+    white-space: normal;
+  }
+}
+
+@media (forced-colors: active) {
+  :root {
+    scrollbar-color: auto;
+    scrollbar-width: auto;
+  }
 }
