@@ -39,7 +39,7 @@ export function ServiceSection() {
               Tout est pensé pour prendre la route{" "}
               <span className="text-[#084ea3]">sereinement.</span>
             </h2>
-            <p className="mt-4 max-w-lg text-base leading-7 text-slate-600">
+            <p className="mt-4 max-w-lg text-base font-medium leading-7 text-slate-600">
               Le bon véhicule, une réservation claire et une équipe présente
               tout au long du trajet.
             </p>
@@ -65,7 +65,7 @@ export function ServiceSection() {
                   <h3 className="text-base font-bold tracking-tight text-slate-950 sm:text-lg">
                     {title}
                   </h3>
-                  <p className="mt-1 text-sm leading-6 text-slate-600">
+                  <p className="mt-1 text-sm font-medium leading-6 text-slate-600">
                     {text}
                   </p>
                 </div>

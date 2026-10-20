@@ -62,7 +62,7 @@ export function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="rounded-sm py-2 text-sm font-medium text-slate-800 underline decoration-2 decoration-transparent underline-offset-[7px] transition-colors hover:text-brand hover:decoration-brand focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand"
+              className="rounded-sm py-2 text-sm font-semibold text-slate-800 underline decoration-2 decoration-transparent underline-offset-[7px] transition-colors hover:text-brand hover:decoration-brand focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand"
             >
               {link.label}
             </a>
@@ -70,7 +70,7 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2 justify-self-end sm:gap-3 lg:gap-7">
-          <div className="hidden items-center gap-6 md:flex">
+          <div className="hidden items-center md:flex">
             {/* <a
               href="#reservation"
               className="inline-flex items-center gap-2 text-sm font-medium text-slate-700 transition-colors hover:text-brand focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand"
@@ -80,9 +80,9 @@ export function Header() {
             </a> */}
             <a
               href="#a-propos"
-              className="hidden items-center gap-2 text-sm font-medium text-slate-700 transition-colors hover:text-brand focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand xl:inline-flex"
+              className="inline-flex items-center gap-2 whitespace-nowrap text-sm font-medium text-slate-700 transition-colors hover:text-brand focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand"
             >
-              <MapPin aria-hidden="true" className="size-4" />
+              <MapPin aria-hidden="true" className="size-4 shrink-0" />
               Nos agences
             </a>
           </div>

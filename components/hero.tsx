@@ -42,7 +42,7 @@ export function Hero() {
           <h1 className="text-[2.35rem] font-bold leading-[1.02] tracking-[-0.055em] min-[380px]:text-[2.65rem]">
             Partez sur la route l’esprit léger.
           </h1>
-          <p className="mt-4 max-w-[34rem] text-sm font-medium leading-relaxed text-slate-700">
+          <p className="mt-4 max-w-[26rem] text-sm font-semibold leading-relaxed text-slate-700">
             Le bon véhicule, au bon endroit et au bon moment, avec une équipe locale à vos côtés pour chaque trajet.
           </p>
           <Button
@@ -77,7 +77,7 @@ export function Hero() {
               <br />
               <span className="text-[#084ea3]">l’esprit léger.</span>
             </h1>
-            <p className="mt-6 max-w-[34rem] text-base font-medium leading-relaxed text-slate-800">
+            <p className="mt-6 max-w-[26rem] text-base font-semibold leading-relaxed text-slate-800">
               Le bon véhicule, au bon endroit et au bon moment, avec une équipe locale à vos côtés pour chaque trajet.
             </p>
             <Button
@@ -100,7 +100,7 @@ export function Hero() {
           className="mx-auto grid max-w-[76rem] grid-cols-1 px-5 sm:grid-cols-3 sm:px-8 lg:px-10"
         >
           {commitments.map(({ icon: Icon, title, description }, index) => (
-            <li key={title} className="relative flex gap-4 border-b border-slate-200 py-5 last:border-b-0 sm:min-h-[150px] sm:flex-col sm:justify-between sm:border-b-0 sm:px-6 sm:py-6 sm:first:pl-0 sm:last:pr-0 sm:not-last:border-r sm:not-last:border-slate-200 lg:px-8">
+            <li key={title} className="relative flex gap-4 border-b border-slate-200 py-5 last:border-b-0 sm:min-h-[126px] sm:flex-col sm:justify-between sm:border-b-0 sm:px-6 sm:py-4 sm:first:pl-0 sm:last:pr-0 sm:not-last:border-r sm:not-last:border-[#084ea3]/25 lg:px-8">
               <span aria-hidden="true" className="mt-0.5 flex size-9 shrink-0 items-center justify-center text-brand sm:mt-0">
                 <Icon className="size-[21px]" strokeWidth={1.7} />
               </span>

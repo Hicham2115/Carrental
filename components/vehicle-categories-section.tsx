@@ -83,12 +83,12 @@ export function VehicleCategoriesSection() {
             </h2>
           </div>
           <div className="max-w-md lg:justify-self-end lg:border-l-2 lg:border-[#084ea3]/30 lg:pl-6">
-            <p className="text-sm font-medium leading-7 text-slate-700 lg:text-base lg:leading-8">
+            <p className="text-sm font-semibold leading-7 text-slate-800 lg:text-base lg:leading-8">
               De la citadine agile au grand utilitaire, choisissez le format qui
               vous accompagne au Maroc.
             </p>
-            <p className="mt-3 flex items-start gap-2 text-xs leading-5 text-slate-500">
-              <Info aria-hidden="true" className="mt-0.5 size-3.5 shrink-0 text-[#084ea3]" />
+            <p className="mt-3 flex items-start gap-2 border-t border-slate-200 pt-3 text-[13px] font-semibold leading-5 text-slate-600">
+              <Info aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-[#084ea3]" />
               <span>Modèles et caractéristiques illustratifs, à confirmer lors de la réservation.</span>
             </p>
           </div>
@@ -117,7 +117,7 @@ export function VehicleCategoriesSection() {
                 <h3 className="text-lg font-bold tracking-tight text-slate-950">
                   {name}
                 </h3>
-                <p className="mt-1.5 min-h-10 text-sm leading-5 text-slate-600">
+                <p className="mt-1.5 min-h-10 text-sm font-medium leading-5 text-slate-600">
                   {description}
                 </p>
                 <ul
