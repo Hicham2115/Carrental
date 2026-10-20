@@ -33,7 +33,7 @@ export function Hero() {
           className="-z-20 object-cover object-[62%_57%]"
         />
         <div className="mx-auto flex h-full max-w-[100rem] items-start px-5 pt-12 text-brand-strong sm:px-8 sm:pt-16 lg:px-14 lg:pt-24">
-          <div className="max-w-[42rem]">
+          <div className="hero-copy-enter max-w-[42rem]">
             <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-brand sm:text-xs">
               Location de voiture au Maroc
             </p>

@@ -104,7 +104,7 @@ export function SiteFooter() {
         </div>
         <p
           aria-hidden="true"
-          className="pointer-events-none mx-auto w-full overflow-hidden bg-gradient-to-r from-[#24436f] via-[#6c94f5] to-[#24436f] bg-clip-text pb-6 text-center text-[clamp(48px,18.5vw,260px)] leading-[.72] font-black tracking-[-.105em] text-transparent select-none"
+          className="pointer-events-none mx-auto w-full overflow-hidden bg-gradient-to-r from-[#24436f] via-[#6c94f5] to-[#24436f] bg-clip-text pb-6 text-center text-[clamp(48px,17vw,240px)] leading-[.72] font-black tracking-[-.12em] text-transparent select-none"
         >
           CARRENTAL
         </p>

@@ -9,6 +9,7 @@ import { ServiceSection } from "@/components/service-section";
 import { VehicleCategoriesSection } from "@/components/vehicle-categories-section";
 import { SiteFooter } from "@/components/site-footer";
 import { Header } from "@/components/layout/header";
+import { SectionReveal } from "@/components/section-reveal";
 
 export default function HomePage() {
   return (
@@ -16,13 +17,13 @@ export default function HomePage() {
       <Header />
       <main>
         <Hero />
-        <AboutSection />
-        <VehicleCategoriesSection />
-        <ServiceSection />
-        <ReviewsSection />
-        <FAQSection />
-        <ContactSection />
-        <CTASection />
+        <SectionReveal><AboutSection /></SectionReveal>
+        <SectionReveal><VehicleCategoriesSection /></SectionReveal>
+        <SectionReveal><ServiceSection /></SectionReveal>
+        <SectionReveal><ReviewsSection /></SectionReveal>
+        <SectionReveal><FAQSection /></SectionReveal>
+        <SectionReveal><ContactSection /></SectionReveal>
+        <SectionReveal><CTASection /></SectionReveal>
       </main>
       <SiteFooter />
       <Toaster position="top-right" richColors />
