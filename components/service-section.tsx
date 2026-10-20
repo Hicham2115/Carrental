@@ -31,13 +31,13 @@ export function ServiceSection() {
       <div className="mx-auto grid max-w-7xl gap-8 px-5 sm:px-8 lg:grid-cols-[1fr_0.9fr] lg:items-stretch lg:gap-12 lg:px-10">
         <div className="flex flex-col justify-center">
           <div className="max-w-xl">
-            <p className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.18em] text-brand">
-              <span aria-hidden="true" className="h-px w-8 bg-brand" />
+            <p className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.18em] text-[#084ea3]">
+              <span aria-hidden="true" className="h-px w-8 bg-[#084ea3]" />
               Nos services
             </p>
             <h2 className="mt-4 text-3xl font-semibold leading-[1.15] tracking-[-0.045em] text-slate-950 sm:text-4xl lg:text-[2.7rem]">
               Tout est pensé pour prendre la route{" "}
-              <span className="text-brand">sereinement.</span>
+              <span className="text-[#084ea3]">sereinement.</span>
             </h2>
             <p className="mt-4 max-w-lg text-base leading-7 text-slate-600">
               Le bon véhicule, une réservation claire et une équipe présente
@@ -45,13 +45,13 @@ export function ServiceSection() {
             </p>
           </div>
 
-          <div className="relative mt-7 divide-y divide-border border-y border-border before:pointer-events-none before:absolute before:bottom-9 before:left-[1.375rem] before:top-9 before:w-px before:bg-brand/20 sm:mt-8 sm:before:left-6">
+          <div className="relative mt-7 divide-y divide-border border-y border-border before:pointer-events-none before:absolute before:bottom-9 before:left-[1.375rem] before:top-9 before:w-px before:bg-[#084ea3]/20 sm:mt-8 sm:before:left-6">
             {services.map(({ icon: Icon, step, title, text }) => (
               <div
                 key={title}
                 className="flex items-start gap-4 py-4 sm:gap-5 sm:py-5"
               >
-                <span className="relative z-10 flex size-11 shrink-0 items-center justify-center rounded-xl bg-brand text-white sm:size-12">
+                <span className="relative z-10 flex size-11 shrink-0 items-center justify-center rounded-xl bg-[#084ea3] text-white sm:size-12">
                   <Icon
                     aria-hidden="true"
                     className="size-5"
@@ -59,7 +59,7 @@ export function ServiceSection() {
                   />
                 </span>
                 <div>
-                  <p className="mb-1 text-[10px] font-bold uppercase tracking-[0.14em] text-brand">
+                  <p className="mb-1 text-[10px] font-bold uppercase tracking-[0.14em] text-[#084ea3]">
                     {step}
                   </p>
                   <h3 className="text-base font-bold tracking-tight text-slate-950 sm:text-lg">
@@ -75,7 +75,7 @@ export function ServiceSection() {
 
           <a
             href="#contact"
-            className="mt-6 inline-flex min-h-12 w-fit items-center gap-3 rounded-xl bg-brand px-5 text-sm font-semibold text-white transition-colors hover:bg-brand-strong focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand"
+            className="mt-6 inline-flex min-h-12 w-fit cursor-pointer items-center gap-3 rounded-sm bg-[#084ea3] px-5 text-sm font-semibold text-white shadow-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#084ea3]"
           >
             Parlons de votre trajet
             <ArrowUpRight
@@ -86,7 +86,7 @@ export function ServiceSection() {
           </a>
         </div>
 
-        <figure className="relative min-h-[340px] rounded-[2rem] border border-[#d8e5f4] bg-surface-blue p-3 shadow-[0_24px_55px_-30px_rgba(7,59,122,0.28)] sm:min-h-[420px] lg:min-h-[560px]">
+        <figure className="relative min-h-[340px] rounded-[2rem] border border-[#d8e5f4] bg-surface-blue p-3 shadow-[0_24px_55px_-30px_rgba(8,78,163,0.18)] sm:min-h-[420px] lg:min-h-[560px]">
           <div className="absolute inset-3 overflow-hidden rounded-[1.35rem] ring-1 ring-white/80">
             <Image
               src="/images/services-interior.webp"
@@ -97,7 +97,7 @@ export function ServiceSection() {
             />
             <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-slate-950/35 to-transparent" />
           </div>
-          <figcaption className="absolute bottom-7 left-7 rounded-lg border border-white/30 bg-brand px-4 py-3 text-xs font-semibold uppercase tracking-[0.15em] text-white shadow-[0_8px_24px_rgba(7,59,122,0.28)] sm:bottom-9 sm:left-9">
+          <figcaption className="absolute bottom-7 left-7 rounded-lg border border-white/30 bg-[#084ea3] px-4 py-3 text-xs font-semibold uppercase tracking-[0.15em] text-white shadow-[0_8px_24px_rgba(8,78,163,0.28)] sm:bottom-9 sm:left-9">
             Casablanca · Maroc
           </figcaption>
         </figure>

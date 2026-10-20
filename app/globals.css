@@ -45,25 +45,25 @@
   --card-foreground: #111111;
   --popover: #ffffff;
   --popover-foreground: #111111;
-  --primary: #0b4ea2;
+  --primary: #084ea3;
   --primary-foreground: #ffffff;
   --secondary: #f1f6fc;
   --secondary-foreground: #111111;
   --muted: #f1f6fc;
   --muted-foreground: #657286;
   --accent: #eaf2fb;
-  --accent-foreground: #073b7a;
+  --accent-foreground: #084ea3;
   --destructive: #b42318;
   --border: #dce5f0;
   --input: #cbd7e5;
-  --ring: #0b4ea2;
-  --brand: #0b4ea2;
-  --brand-strong: #073b7a;
+  --ring: #084ea3;
+  --brand: #084ea3;
+  --brand-strong: #1d336b;
   --surface-blue: #f1f6fc;
   --brand-muted: #eaf2fb;
   --star: #f0aa28;
   --radius: 0.75rem;
-  scrollbar-color: #0b4ea2 #eaf2fb;
+  scrollbar-color: #084ea3 #eaf2fb;
   scrollbar-width: thin;
 }
 
@@ -76,7 +76,7 @@
     @apply font-sans;
     scroll-behavior: auto;
     scroll-padding-top: 5rem;
-    scrollbar-color: #0b4ea2 #eaf2fb;
+    scrollbar-color: #084ea3 #eaf2fb;
     scrollbar-width: thin;
   }
 
@@ -96,7 +96,7 @@
 
   ::selection {
     background: #d9e8fb;
-    color: #073b7a;
+    color: #084ea3;
   }
 }
 
@@ -112,19 +112,19 @@
 *::-webkit-scrollbar-thumb {
   border: 2px solid #eaf2fb;
   border-radius: 999px;
-  background: #0b4ea2;
+  background: #084ea3;
 }
 
 *::-webkit-scrollbar-thumb:hover {
-  background: #073b7a;
+  background: #1d336b;
 }
 
 html::-webkit-scrollbar-thumb {
-  background: #0b4ea2;
+  background: #084ea3;
 }
 
 html::-webkit-scrollbar-thumb:hover {
-  background: #073b7a;
+  background: #1d336b;
 }
 
 .announcement-track {

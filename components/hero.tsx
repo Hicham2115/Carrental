@@ -41,18 +41,17 @@ export function Hero() {
               id="hero-title"
               className="max-w-[42rem] text-[2.65rem] font-bold leading-[1.02] tracking-[-0.055em] text-slate-950 sm:text-[3.25rem] lg:text-[4.25rem]"
             >
-              Partez
+              Partez sur la route
               <br />
-              <span className="text-brand">l’esprit léger.</span>
+              <span className="text-[#084ea3]">l’esprit léger.</span>
             </h1>
-            <p className="mt-4 max-w-[30rem] text-lg leading-[1.45] text-slate-800 sm:mt-6 sm:text-[1.35rem] sm:leading-[1.45]">
-              Le bon véhicule, au bon endroit,
-              <br className="hidden sm:block" /> au bon moment.
+            <p className="mt-4 max-w-[34rem] text-[0.95rem] font-medium leading-relaxed text-slate-800 sm:mt-6 sm:text-base sm:leading-relaxed">
+              Le bon véhicule, au bon endroit et au bon moment, avec une équipe locale à vos côtés pour chaque trajet.
             </p>
             <Button
               render={<a href="#services" />}
               nativeButton={false}
-              className="mt-6 h-12 rounded-lg px-6 text-sm font-semibold shadow-none sm:mt-8 sm:h-14 sm:px-7 sm:text-base"
+              className="mt-6 h-12 rounded-sm px-6 text-sm font-semibold shadow-none sm:mt-8 sm:h-14 sm:px-7 sm:text-base"
             >
               Découvrir nos voitures
               <ArrowRight aria-hidden="true" className="size-5" />

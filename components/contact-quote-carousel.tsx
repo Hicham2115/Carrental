@@ -24,12 +24,15 @@ export function ContactQuoteCarousel() {
         <span className="text-xs tabular-nums text-white/65">0{active + 1} / 0{quotes.length}</span>
       </div>
 
-      <figure key={active} className="animate-[quote-in_350ms_ease-out] rounded-[1.5rem] bg-white px-6 py-6 text-slate-950 shadow-[0_20px_48px_rgba(4,12,39,0.16)] sm:px-8">
-        <Quote aria-hidden="true" className="mb-3 size-6 fill-[#dce8f8] text-[#dce8f8]" />
-        <blockquote className="min-h-[3.5rem] text-base font-medium leading-7 tracking-[-0.015em]">{quote.text}</blockquote>
-        <figcaption className="mt-5 flex flex-wrap items-center justify-between gap-2 border-t border-slate-200 pt-4">
-          <span className="text-sm font-semibold text-[#123e80]">{quote.name} <span className="font-normal text-slate-500">· {quote.city}</span></span>
-          <span className="text-[10px] font-semibold uppercase tracking-[0.1em] text-slate-500">Exemple non vérifié</span>
+      <figure key={active} className="animate-[quote-in_350ms_ease-out] relative overflow-hidden rounded-xl border border-white/70 bg-[#f7f9fc] px-6 py-6 text-slate-950 shadow-[0_16px_36px_rgba(4,12,39,0.12)] sm:px-8 sm:py-7">
+        <div className="mb-6 flex items-center justify-between border-b border-slate-200 pb-4">
+          <span className="text-[10px] font-semibold uppercase tracking-[0.16em] text-slate-500">Témoignage</span>
+          <Quote aria-hidden="true" className="size-4 fill-[#084ea3] text-[#084ea3]" />
+        </div>
+        <blockquote className="min-h-[3.5rem] max-w-[38rem] text-[15px] font-medium leading-7 tracking-[-0.01em] sm:text-base">{quote.text}</blockquote>
+        <figcaption className="mt-6 flex flex-wrap items-end justify-between gap-x-4 gap-y-2">
+          <span className="text-sm font-semibold tracking-tight text-slate-950">{quote.name}<span className="ml-2 font-normal text-slate-500">{quote.city}</span></span>
+          <span className="text-[9px] font-semibold uppercase tracking-[0.12em] text-slate-400">Exemple non vérifié</span>
         </figcaption>
       </figure>
 
@@ -40,8 +43,8 @@ export function ContactQuoteCarousel() {
           ))}
         </div>
         <div className="flex gap-2">
-          <button type="button" onClick={() => showQuote(-1)} aria-label="Voir l’avis précédent" className="flex size-9 items-center justify-center rounded-full border border-white/35 text-white transition-colors hover:bg-white/15 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"><ArrowLeft aria-hidden="true" className="size-4" /></button>
-          <button type="button" onClick={() => showQuote(1)} aria-label="Voir l’avis suivant" className="flex size-9 items-center justify-center rounded-full bg-white text-[#123e80] transition-colors hover:bg-[#eaf1fa] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"><ArrowRight aria-hidden="true" className="size-4" /></button>
+          <button type="button" onClick={() => showQuote(-1)} aria-label="Voir l’avis précédent" className="flex size-9 items-center justify-center rounded-md border border-white/35 text-white transition-colors hover:bg-white/15 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"><ArrowLeft aria-hidden="true" className="size-4" /></button>
+          <button type="button" onClick={() => showQuote(1)} aria-label="Voir l’avis suivant" className="flex size-9 items-center justify-center rounded-md bg-white text-[#084ea3] transition-colors hover:bg-[#eaf1fa] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"><ArrowRight aria-hidden="true" className="size-4" /></button>
         </div>
       </div>
       <style jsx>{`@keyframes quote-in { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } } @media (prefers-reduced-motion: reduce) { figure { animation: none; } }`}</style>

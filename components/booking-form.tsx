@@ -188,7 +188,7 @@ export function BookingForm() {
         }}
       </form.Field>
 
-      <Button type="submit" className="h-12 rounded-lg px-5 text-sm font-semibold shadow-none sm:col-span-2 lg:col-span-1 lg:ml-5">
+      <Button type="submit" className="h-12 rounded-sm px-5 text-sm font-semibold shadow-none sm:col-span-2 lg:col-span-1 lg:ml-5">
         <Search aria-hidden="true" className="size-4" />
         Rechercher
       </Button>

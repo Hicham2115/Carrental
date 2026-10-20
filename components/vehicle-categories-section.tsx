@@ -68,21 +68,21 @@ export function VehicleCategoriesSection() {
       <div className="w-full px-5 sm:px-8 lg:px-12 2xl:px-16">
         <div className="grid items-end gap-5 border-b border-slate-200 pb-7 sm:pb-8 lg:grid-cols-[1fr_0.6fr] lg:gap-12">
           <div>
-            <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-brand">
-              <span aria-hidden="true" className="h-px w-6 bg-brand" />
+            <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-[#084ea3]">
+              <span aria-hidden="true" className="h-px w-6 bg-[#084ea3]" />
               Nos véhicules
             </p>
             <h2 className="mt-3 text-3xl font-semibold leading-tight tracking-[-0.04em] text-slate-950 sm:text-4xl">
               Trouvez la voiture faite pour votre trajet.
             </h2>
           </div>
-          <div className="max-w-md lg:justify-self-end lg:border-l-2 lg:border-brand/30 lg:pl-6">
+          <div className="max-w-md lg:justify-self-end lg:border-l-2 lg:border-[#084ea3]/30 lg:pl-6">
             <p className="text-sm font-medium leading-7 text-slate-700 lg:text-base lg:leading-8">
               De la citadine agile au grand utilitaire, choisissez le format qui
               vous accompagne au Maroc.
             </p>
             <p className="mt-3 flex items-start gap-2 text-xs leading-5 text-slate-500">
-              <Info aria-hidden="true" className="mt-0.5 size-3.5 shrink-0 text-brand" />
+              <Info aria-hidden="true" className="mt-0.5 size-3.5 shrink-0 text-[#084ea3]" />
               <span>Caractéristiques illustratives, à confirmer lors de la réservation.</span>
             </p>
           </div>
@@ -92,10 +92,10 @@ export function VehicleCategoriesSection() {
           {categories.map(({ name, description, price, specs, image, imageAlt }) => (
             <article
               key={name}
-              className="group flex min-w-0 flex-col overflow-hidden rounded-2xl border border-border bg-white shadow-[0_10px_30px_-24px_rgba(7,59,122,0.35)] transition-[border-color,box-shadow,transform] duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-[0_22px_46px_-26px_rgba(7,59,122,0.4)] motion-reduce:transform-none motion-reduce:transition-none"
+              className="group flex min-w-0 flex-col overflow-hidden rounded-2xl border border-border bg-white shadow-[0_10px_30px_-24px_rgba(8,78,163,0.16)] transition-[border-color,box-shadow,transform] duration-300 hover:-translate-y-1 hover:border-[#084ea3]/40 hover:shadow-[0_22px_46px_-26px_rgba(8,78,163,0.24)] motion-reduce:transform-none motion-reduce:transition-none"
             >
               <div className="relative aspect-[2/1] overflow-hidden border-b border-border bg-surface-blue">
-                <span className="absolute left-4 top-4 z-10 rounded-md border border-brand/15 bg-white/90 px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.13em] text-brand">
+                <span className="absolute left-4 top-4 z-10 rounded-md border border-[#084ea3]/15 bg-white/90 px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.13em] text-[#084ea3]">
                   Catégorie
                 </span>
                 <Image
@@ -120,7 +120,7 @@ export function VehicleCategoriesSection() {
                 >
                   {vehicleDetails.map(({ label, key, icon: Icon }) => (
                     <li key={label} className="flex min-w-0 items-start gap-2.5">
-                      <span className="flex size-7 shrink-0 items-center justify-center rounded-md bg-surface-blue text-brand">
+                      <span className="flex size-7 shrink-0 items-center justify-center rounded-md bg-surface-blue text-[#084ea3]">
                         <Icon aria-hidden="true" className="size-4" />
                       </span>
                       <span className="flex min-w-0 flex-col text-xs leading-4">
@@ -132,16 +132,16 @@ export function VehicleCategoriesSection() {
                 </ul>
                 <div className="mt-4 flex items-end justify-between gap-3 border-t border-border pt-4">
                   {price === null ? (
-                    <p className="text-base font-bold text-brand">Tarif sur demande</p>
+                    <p className="text-base font-bold text-[#084ea3]">Tarif sur demande</p>
                   ) : (
                     <p className="flex flex-col gap-0.5 text-xs font-medium text-slate-500">
                       À partir de
-                      <span className="text-2xl font-bold tracking-tight text-brand">{price} € <span className="text-xs font-medium tracking-normal text-slate-500">/ jour</span></span>
+                      <span className="text-2xl font-bold tracking-tight text-[#084ea3]">{price} € <span className="text-xs font-medium tracking-normal text-slate-500">/ jour</span></span>
                     </p>
                   )}
                   <a
                     href="#reservation"
-                    className="inline-flex min-h-11 items-center gap-2 rounded-lg bg-brand px-4 text-sm font-semibold text-white transition-colors hover:bg-brand-strong focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+                    className="inline-flex min-h-11 cursor-pointer items-center gap-2 rounded-sm bg-[#084ea3] px-4 text-sm font-semibold text-white shadow-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#084ea3]"
                   >
                     {price === null ? "Demander un tarif" : "Réserver"}
                     <ArrowRight aria-hidden="true" className="size-4" />

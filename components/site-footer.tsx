@@ -19,9 +19,9 @@ export function SiteFooter() {
             <a
               href="#accueil"
               aria-label="Carrental.ma, retour à l’accueil"
-              className="inline-flex rounded bg-white p-2"
+              className="inline-flex text-2xl font-bold tracking-tight text-white"
             >
-              <Logo className="w-40" />
+              Carrental.ma
             </a>
             <p className="mt-4 max-w-sm text-sm leading-6 text-slate-300">
               Votre mobilité, simplement. Louez une voiture et découvrez le
