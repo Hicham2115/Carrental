@@ -24,15 +24,15 @@ export function ContactQuoteCarousel() {
         <span className="text-xs tabular-nums text-white/65">0{active + 1} / 0{quotes.length}</span>
       </div>
 
-      <figure key={active} className="animate-[quote-in_350ms_ease-out] relative overflow-hidden rounded-xl border border-slate-200 bg-[#f7f9fc] px-6 py-6 text-slate-950 shadow-[0_12px_28px_rgba(8,25,62,0.12)] sm:px-8 sm:py-7">
-        <div className="mb-6 flex items-center justify-between border-b border-slate-200 pb-4">
-          <span className="text-[10px] font-semibold uppercase tracking-[0.16em] text-slate-500">Témoignage</span>
-          <Quote aria-hidden="true" className="size-4 fill-[#084ea3] text-[#084ea3]" />
+      <figure key={active} className="animate-[quote-in_350ms_ease-out] relative border-l-2 border-[#084ea3] px-5 py-5 text-white sm:px-7 sm:py-6">
+        <div className="mb-5 flex items-center justify-between gap-4">
+          <span className="text-[10px] font-semibold uppercase tracking-[0.17em] text-white/75 underline decoration-white/50 underline-offset-4">Témoignage</span>
+          <Quote aria-hidden="true" className="size-6 fill-white/20 text-white/20" />
         </div>
-        <blockquote className="min-h-[3.5rem] max-w-[38rem] text-[15px] font-medium leading-7 tracking-[-0.01em] sm:text-base">{quote.text}</blockquote>
-        <figcaption className="mt-6 flex flex-wrap items-end justify-between gap-x-4 gap-y-2">
-          <span className="text-sm font-semibold tracking-tight text-slate-950">{quote.name}<span className="ml-2 font-normal text-slate-500">{quote.city}</span></span>
-          <span className="text-[9px] font-semibold uppercase tracking-[0.12em] text-slate-400">Exemple non vérifié</span>
+        <blockquote className="min-h-[3.5rem] max-w-[38rem] text-base font-medium leading-7 tracking-[-0.01em] text-white sm:text-lg">{quote.text}</blockquote>
+        <figcaption className="mt-6 flex flex-wrap items-center justify-between gap-x-4 gap-y-3 border-t border-white/15 pt-4">
+          <span className="text-sm font-semibold tracking-tight text-white"><span className="underline decoration-white/45 underline-offset-4">{quote.name}</span><span className="ml-2 font-normal text-white/60">{quote.city}</span></span>
+          <span className="border border-white/20 px-2.5 py-1 text-[9px] font-semibold uppercase tracking-[0.12em] text-white/55">Exemple non vérifié</span>
         </figcaption>
       </figure>
 

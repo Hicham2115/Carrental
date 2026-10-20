@@ -136,7 +136,7 @@ export function VehicleCategoriesSection() {
                     </li>
                   ))}
                 </ul>
-                <div className="mt-4 flex items-end justify-between gap-3 border-t border-border pt-4">
+                <div className="mt-4 flex flex-col items-stretch justify-between gap-3 border-t border-border pt-4 min-[420px]:flex-row min-[420px]:items-end">
                   {price === null ? (
                     <p className="text-base font-bold text-[#084ea3]">Tarif sur demande</p>
                   ) : (
@@ -147,7 +147,7 @@ export function VehicleCategoriesSection() {
                   )}
                   <a
                     href="#reservation"
-                    className="inline-flex min-h-11 cursor-pointer items-center gap-2 rounded-sm bg-[#084ea3] px-4 text-sm font-semibold text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#084ea3]"
+                    className="inline-flex min-h-11 w-full cursor-pointer items-center justify-center gap-2 rounded-sm bg-[#084ea3] px-4 text-sm font-semibold text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#084ea3] min-[420px]:w-auto"
                   >
                     {price === null ? "Demander un tarif" : "Réserver"}
                     <ArrowRight aria-hidden="true" className="size-4" />

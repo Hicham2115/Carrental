@@ -23,29 +23,30 @@ const commitments = [
 export function Hero() {
   return (
     <section id="accueil" aria-labelledby="hero-title" className="pb-6 sm:pb-0">
-      <div className="relative isolate h-[520px] overflow-hidden bg-slate-100 sm:h-[580px] lg:h-[560px]">
+      <div className="relative isolate min-h-[620px] overflow-hidden bg-slate-100 sm:h-[580px] sm:min-h-0 lg:h-[560px]">
         <Image
           src="/images/hero-casablanca-blue.png"
           alt="Une voiture bleue sur le front de mer de Casablanca, avec la mosquée Hassan II en arrière-plan"
           fill
           priority
           sizes="100vw"
-          className="-z-20 object-cover object-[62%_57%]"
+          className="-z-20 object-cover object-[68%_center] sm:object-[62%_57%]"
         />
-        <div className="mx-auto flex h-full max-w-[100rem] items-start px-5 pt-12 text-brand-strong sm:px-8 sm:pt-16 lg:px-14 lg:pt-24">
-          <div className="hero-copy-enter max-w-[42rem]">
+        <div aria-hidden="true" className="absolute inset-0 -z-10 bg-gradient-to-b from-white/75 via-white/35 to-transparent sm:hidden" />
+        <div className="mx-auto flex min-h-[620px] max-w-[100rem] items-start px-5 pb-16 pt-14 text-brand-strong sm:h-full sm:min-h-0 sm:px-8 sm:pb-0 sm:pt-16 lg:px-14 lg:pt-24">
+          <div className="hero-copy-enter max-w-[42rem] sm:max-w-[36rem] lg:max-w-[42rem]">
             <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-brand sm:text-xs">
               Location de voiture au Maroc
             </p>
             <h1
               id="hero-title"
-              className="max-w-[42rem] text-[2.65rem] font-bold leading-[1.02] tracking-[-0.055em] text-slate-950 sm:text-[3.25rem] lg:text-[4.25rem]"
+              className="max-w-[42rem] text-[2.35rem] font-bold leading-[1.02] tracking-[-0.055em] min-[380px]:text-[2.65rem] sm:text-[3.25rem] lg:text-[4.25rem]"
             >
               Partez sur la route
-              <br />
+              <br className="hidden sm:block" />
               <span className="text-[#084ea3]">l’esprit léger.</span>
             </h1>
-            <p className="mt-4 max-w-[34rem] text-[0.95rem] font-medium leading-relaxed text-slate-800 sm:mt-6 sm:text-base sm:leading-relaxed">
+            <p className="mt-4 max-w-[34rem] text-sm font-medium leading-relaxed text-slate-800 sm:mt-6 sm:text-base sm:leading-relaxed">
               Le bon véhicule, au bon endroit et au bon moment, avec une équipe locale à vos côtés pour chaque trajet.
             </p>
             <Button

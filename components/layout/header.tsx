@@ -1,4 +1,7 @@
-import { MapPin, Menu, Search } from "lucide-react";
+"use client";
+
+import { useState } from "react";
+import { MapPin, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/navbar-components/logo";
 
@@ -18,15 +21,17 @@ const announcements = [
 ];
 
 export function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <header className="relative z-30 border-b border-slate-100 bg-white">
+    <header className="relative z-50 border-b border-slate-100 bg-white">
       <div className="announcement-bar relative h-9 overflow-hidden border-b border-white/15 bg-[#084ea3] text-[10px] font-semibold tracking-[0.04em] text-white sm:h-10 sm:text-xs">
         <div className="announcement-track" aria-hidden="true">
           {[0, 1].map((copy) => (
             <div className="announcement-group" key={copy}>
               {[0, 1, 2].map((cycle) => (
                 <div className="announcement-cycle" key={cycle}>
-                  {announcements.map((message, index) => (
+                  {announcements.map((message) => (
                     <span className="inline-flex items-center gap-5 sm:gap-7" key={`${cycle}-${message}`}>
                       <span className="transition-colors">{message}</span>
                       <span className="size-1 rounded-full bg-sky-300" aria-hidden="true" />
@@ -46,7 +51,7 @@ export function Header() {
           className="shrink-0 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand"
           aria-label="Carrental.ma, accueil"
         >
-          <Logo className="h-auto w-[148px] sm:w-[190px] lg:w-[230px]" />
+          <Logo className="h-auto w-[118px] min-[380px]:w-[148px] sm:w-[190px] lg:w-[230px]" />
         </a>
 
         <nav
@@ -85,33 +90,71 @@ export function Header() {
           <Button
             render={<a href="#reservation" />}
             nativeButton={false}
-            className="h-10 rounded-sm px-4 text-sm font-semibold shadow-none sm:px-5 lg:h-11 lg:px-7"
+            className="h-10 rounded-sm px-3 text-sm font-semibold shadow-none min-[380px]:px-4 sm:px-5 lg:h-11 lg:px-7"
           >
             Réserver
           </Button>
 
-          <details className="group relative xl:hidden">
-            <summary className="flex size-10 cursor-pointer list-none items-center justify-center rounded-lg border border-border text-slate-800 transition hover:bg-surface-blue focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand [&::-webkit-details-marker]:hidden">
-              <Menu aria-hidden="true" className="size-5" />
-              <span className="sr-only">Ouvrir le menu</span>
-            </summary>
-            <nav
-              aria-label="Navigation mobile"
-              className="absolute right-0 top-[calc(100%+0.75rem)] w-56 rounded-xl border border-border bg-white p-2 shadow-xl"
-            >
-              {links.map((link) => (
+          <button
+            type="button"
+            aria-label={menuOpen ? "Fermer le menu" : "Ouvrir le menu"}
+            aria-expanded={menuOpen}
+            aria-controls="mobile-navigation"
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="flex size-10 items-center justify-center rounded-full border border-border text-slate-800 transition hover:bg-surface-blue focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand xl:hidden"
+          >
+            {menuOpen ? <X aria-hidden="true" className="size-5" /> : <Menu aria-hidden="true" className="size-5" />}
+          </button>
+        </div>
+      </div>
+
+      {menuOpen ? (
+        <>
+          <button
+            type="button"
+            aria-label="Fermer le menu"
+            onClick={() => setMenuOpen(false)}
+            className="fixed inset-0 z-40 bg-slate-950/45 backdrop-blur-[2px] xl:hidden"
+          />
+          <nav
+            id="mobile-navigation"
+            aria-label="Navigation mobile"
+            className="fixed inset-y-0 right-0 z-50 flex w-[min(88vw,24rem)] flex-col bg-white px-6 pb-8 pt-6 shadow-2xl sm:px-8 xl:hidden"
+          >
+            <div className="flex items-center justify-between border-b border-border pb-5">
+              <span className="text-sm font-semibold text-slate-500">Navigation</span>
+              <button
+                type="button"
+                aria-label="Fermer le menu"
+                onClick={() => setMenuOpen(false)}
+                className="flex size-10 items-center justify-center rounded-full border border-border text-slate-700 hover:bg-surface-blue focus-visible:outline-2 focus-visible:outline-brand"
+              >
+                <X aria-hidden="true" className="size-5" />
+              </button>
+            </div>
+            <div className="mt-5 flex flex-col gap-1">
+              {links.map((link, index) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className="block rounded-lg px-4 py-3 text-sm font-medium text-slate-700 transition hover:bg-surface-blue hover:text-brand focus-visible:outline-2 focus-visible:outline-brand"
+                  onClick={() => setMenuOpen(false)}
+                  className="flex min-h-14 items-center gap-4 border-b border-slate-100 text-lg font-semibold text-slate-800 transition-colors hover:text-brand focus-visible:outline-2 focus-visible:outline-brand"
                 >
+                  <span className="font-mono text-xs text-slate-400">0{index + 1}</span>
                   {link.label}
                 </a>
               ))}
-            </nav>
-          </details>
-        </div>
-      </div>
+            </div>
+            <a
+              href="#reservation"
+              onClick={() => setMenuOpen(false)}
+              className="mt-auto flex min-h-12 items-center justify-center gap-2 rounded-sm bg-[#084ea3] px-5 text-sm font-semibold text-white"
+            >
+              Réserver <span aria-hidden="true">→</span>
+            </a>
+          </nav>
+        </>
+      ) : null}
     </header>
   );
 }
