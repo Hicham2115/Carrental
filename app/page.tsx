@@ -18,13 +18,27 @@ export default function HomePage() {
       <Header />
       <main>
         <Hero />
-        <SectionReveal><AboutSection /></SectionReveal>
-        <SectionReveal><VehicleCategoriesSection /></SectionReveal>
-        <SectionReveal><ServiceSection /></SectionReveal>
-        <SectionReveal><ReviewsSection /></SectionReveal>
-        <SectionReveal><FAQSection /></SectionReveal>
-        <SectionReveal><ContactSection /></SectionReveal>
-        <SectionReveal><CTASection /></SectionReveal>
+        <SectionReveal>
+          <AboutSection />
+        </SectionReveal>
+        <SectionReveal>
+          <VehicleCategoriesSection />
+        </SectionReveal>
+        <SectionReveal>
+          <ServiceSection />
+        </SectionReveal>
+        <SectionReveal>
+          <ReviewsSection />
+        </SectionReveal>
+        <SectionReveal>
+          <FAQSection />
+        </SectionReveal>
+        <SectionReveal>
+          <ContactSection />
+        </SectionReveal>
+        <SectionReveal>
+          <CTASection />
+        </SectionReveal>
       </main>
       <SiteFooter />
       <ScrollToTop />
