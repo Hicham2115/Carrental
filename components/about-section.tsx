@@ -35,11 +35,18 @@ export function AboutSection() {
         </div>
         <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-surface-blue sm:aspect-[1.45/1] lg:aspect-[1.28/1]">
           <Image
-            src="/images/about-traveler.jpg"
-            alt="Un voyageur prêt à prendre la route au Maroc"
+            src="/images/about-marrakech-26-mobile.png"
+            alt="SUV rouge stationné dans une rue de Marrakech, avec la mosquée Koutoubia en arrière-plan"
+            fill
+            sizes="(max-width: 639px) 100vw, 1px"
+            className="object-cover sm:hidden"
+          />
+          <Image
+            src="/images/about-marrakech-26.png"
+            alt="SUV rouge stationné dans une rue de Marrakech, avec la mosquée Koutoubia en arrière-plan"
             fill
             sizes="(max-width: 1024px) 100vw, 48vw"
-            className="object-cover"
+            className="hidden object-cover sm:block"
           />
         </div>
       </div>

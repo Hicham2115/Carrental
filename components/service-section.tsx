@@ -89,8 +89,8 @@ export function ServiceSection() {
         <figure className="relative min-h-[340px] rounded-[2rem] border border-border bg-surface-blue p-3 shadow-[0_16px_36px_rgba(22,48,101,0.08)] sm:min-h-[420px] lg:min-h-[560px]">
           <div className="absolute inset-3 overflow-hidden rounded-[1.35rem] ring-1 ring-white/80">
             <Image
-              src="/images/services-interior.webp"
-              alt="Intérieur d’une voiture avec vue sur le front de mer de Casablanca"
+              src="/images/services-marrakech-26.png"
+              alt="Intérieur d’une voiture avec vue sur une rue de Marrakech et une voiture immatriculée 26"
               fill
               sizes="(min-width: 1024px) 42vw, 100vw"
               className="object-cover object-center"
@@ -98,7 +98,7 @@ export function ServiceSection() {
             <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-slate-950/35 to-transparent" />
           </div>
           <figcaption className="absolute bottom-7 left-7 rounded-lg bg-[#084ea3] px-4 py-3 text-xs font-semibold uppercase tracking-[0.15em] text-white sm:bottom-9 sm:left-9">
-            Casablanca · Maroc
+            Marrakech · Maroc
           </figcaption>
         </figure>
       </div>

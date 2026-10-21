@@ -1,7 +1,7 @@
 ---
 version: alpha
 name: Carrental.ma
-description: French-first car rental website for trips across Morocco.
+description: French-first car rental website based in Marrakech for trips across Morocco.
 colors:
   primary: "#084EA3"
   primary-strong: "#1D336B"
@@ -41,7 +41,7 @@ components:
 
 ### Creative North Star
 
-The page should feel like the first stop before a bright drive along the Casablanca coast: clear blue brand cues, open sky, and a reliable car in view. The hero photograph and booking strip carry the main impression; the sections below stay quiet and easy to scan.
+The page should feel like the first stop before a bright drive through Marrakech: clear blue brand cues, open sky, and a reliable car in view. The rotating hero photographs and booking strip carry the main impression; the sections below stay quiet and easy to scan.
 
 ### Product context and register
 
@@ -50,7 +50,7 @@ The page should feel like the first stop before a bright drive along the Casabla
 - **Locale(s) and language policy:** French for page copy, field labels, validation, feedback, and accessibility names. No second locale is specified.
 - **Usage scene:** A public, responsive marketing site used on phones and desktop browsers while planning a trip.
 - **Register:** Brand site.
-- **Memorable signature:** A sunlit Casablanca car photograph with a booking strip attached to the hero.
+- **Memorable signature:** A sunlit Marrakech car carousel with a booking strip attached to the hero.
 - **Restraint:** Keep navigation, benefits, reviews, questions, and contact information direct. Do not crowd the page with rental inventory or unsupported offers.
 - **Anti-references:** Avoid generic discount banners, dark dashboard styling, visual effects on the wordmark, and unverified claims presented as facts.
 - **Token ownership/runtime mapping:** This file owns the site palette and visual rationale. `app/globals.css` maps its colors and type to Tailwind v4 and shadcn semantic variables. Shared UI components consume those variables.
